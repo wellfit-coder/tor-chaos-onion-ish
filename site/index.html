@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAOS ONION</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; text-align: center; padding: 20px; }
+        h1 { animation: glitch 0.5s infinite; }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(3px, -3px); }
+        }
+        .chaos { font-size: 1.2em; margin: 20px; }
+    </style>
+</head>
+<body>
+    <h1>█ CHAOS ONION █</h1>
+    <p>Welcome to the void. This index.html is fully editable in ~/www/index.html via iOS Files app or text editor.</p>
+    <div class="chaos" id="chaos">Random chaos loading...</div>
+    <script>
+        const messages = ['Nothing is real.', 'All is entropy.', 'Tor only.', 'Edit me. Break me. Rebuild.'];
+        setInterval(() => {
+            document.getElementById('chaos').innerHTML = messages[Math.floor(Math.random()*messages.length)] + '<br>' + Math.random().toString(36).substring(2,15);
+        }, 800);
+    </script>
+</body>
+</html>

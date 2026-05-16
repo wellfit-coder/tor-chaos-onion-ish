@@ -1,0 +1,8 @@
+User tor
+DataDirectory /var/lib/tor
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServiceVersion 3
+HiddenServicePort 80 127.0.0.1:8080
+# Minimal logging for privacy
+Log notice stderr
+# For max privacy, comment out logs or redirect to /dev/null
